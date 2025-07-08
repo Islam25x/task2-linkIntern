@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("/fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+:root {
+  --button-color: #473bf0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+}
+.container {
+  padding: 0 245px 0 166px;
+  margin: 0 auto;
+}
+/* header start  */
+header,
+header .left {
+  display: flex;
+  align-items: center;
+}
+header {
+  margin-top: 16px !important;
+  justify-content: space-between;
+  font-weight: bold;
+}
+header .left nav:first-child {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+}
+header .left nav:nth-child(2) {
+  margin-left: 49px;
+}
+header .left nav:not(:first-child) {
+  margin-left: 49px;
+  font-size: 15px;
+}
+header .right button,
+main .left button {
+  width: 209px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+}
+/* header end  */
+/* main start  */
+main {
+  margin-top: 95px !important;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 136px;
+}
+main .left {
+  margin: calc(153px - 95px) 0 0 78px;
+  width: 541px;
+}
+main .left p:first-child {
+  color: #f64b4b;
+  text-transform: uppercase;
+}
+main .left h1 {
+  font-size: 60px;
+  margin: 23px 0 25px;
+  letter-spacing: -2px;
+}
+main .left p:nth-of-type(2) {
+  color: #161c2d8e;
+  font-size: 19px;
+  line-height: 32px;
+  margin-bottom: 35px;
+}
+main .right {
+  margin-top: calc((153px - 17px) - 95px);
+  position: relative;
+}
+main .right .Oval {
+  width: 463px;
+  height: 463px;
+}
+main .right .Fill {
+  position: absolute;
+  z-index: -1;
+  left: 102px;
+  top: -43px;
+}
+main .right .waves {
+  position: absolute;
+  right: 33px;
+  bottom: 143px;
+}
+main .right .spinner {
+  position: relative;
+  width: 99.04px;
+  height: 98.04px;
+  border: 5px solid #161c2d;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  top: -145px;
+  animation: spin 3s linear infinite;
+}
+main .right .spinner::after {
+  content: "";
+  width: 124px;
+  height: 122px;
+  border: 5px solid #68d585;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  top: -22px;
+  left: -25px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* main end  */
+#services {
+  background-color: #a2a2a3;
+  padding: 117px 0;
+  position: relative;
+}
+#services .top {
+  text-align: center;
+  justify-items: center;
+}
+#services .top p {
+  font-size: 13px;
+  color: #f64b4b;
+  margin-bottom: 23px;
+}
+#services .top h2 {
+  width: 521px;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+}
+#services .cards {
+  margin: 81px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 31px;
+}
+#services .cards .card {
+  width: 350px;
+  height: 483px;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+#services .cards .card h3 {
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  margin: 36px 0 15px;
+}
+#services .cards .card p {
+  width: 296px;
+  font-size: 17px;
+  line-height: 29px;
+  color: #ffffff;
+  opacity: 65%;
+  margin: 0 auto 49px;
+}
+#services .cards .card:first-child {
+  background-color: #68d585;
+}
+#services .cards .card:nth-child(2) {
+  background-color: #473bf0;
+}
+#services .cards .card:last-child {
+  background-color: #f64b4b;
+}
+#services .cards .card img:first-child {
+  margin-top: 60px;
+}
+#services .cards .card .more p {
+  font-weight: bold;
+  opacity: 100%;
+}
+#services .cards .card .more {
+  display: flex;
+  justify-self: center;
+  width: 123px;
+}
+#services .cards .card .more img {
+  align-self: start;
+  margin-top: 8px;
+  margin-left: 23px;
+}
+#services .Group {
+  position: absolute;
+  bottom: 146px;
+  right: 191px;
+  z-index: 1;
+}
