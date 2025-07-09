@@ -1,0 +1,9 @@
+@use '_functions' as *;
+
+@mixin card-style($color) {
+  width: px-to-rem(350);
+  height: px-to-rem(483);
+  color: white;
+  background-color: $color;
+  border-radius: px-to-rem(10);
+}
